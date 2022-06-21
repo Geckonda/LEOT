@@ -1,0 +1,324 @@
+html{
+	font-family: 'Jura', sans-serif;
+	padding:0; 
+}
+body{
+	height: 100%;
+	width: 100%;
+	margin:0;
+}
+#MAIN{
+	transition-duration: 0.75s;
+	background:#E18222;
+	box-shadow: inset 0px 10px 100px 40px rgba(0,0,0,.55);
+	height:2000px;
+	width:100%;
+}
+/*Шапка*/
+header{
+		
+		margin:0;
+		transition-duration: 0.75s;
+		background:#5D1212;
+		box-shadow: inset 0px 10px 70px 0px rgba(0,0,0,.55);
+		display:flex;
+		justify-content: space-between;
+		width:100%;
+		height:150px;
+}
+	#Hleft{
+		width: 40%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+	}
+		.menu{
+			width: 50%;
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+			#LOGO{
+				margin:0 100px 0 0px;
+				width:100px;
+				height:100px;
+				border: 2px solid #E18222;
+				border-radius:50px;
+			}
+	#Hright{
+		width: 30%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+
+
+
+
+/* Buttons in header */
+	#SOSTAV{
+				box-shadow: inset 1px 1px 20px 10px rgba(0,0,0,.55);
+				font-family: 'Jura', sans-serif;
+				outline:none;
+				color:#350000;
+				background-color:#E18222;
+				outline:none;
+				margin: 0px 10px;
+				float:left;
+				height:50px;
+				width:120px;
+				font-size: 25px;
+				 border: 0; 
+				border-radius:50px;
+			}
+	#RULETKA{
+				box-shadow: inset 1px 1px 20px 10px rgba(0,0,0,.55);
+				font-family: 'Jura', sans-serif;
+				outline:none;
+				color:#350000;
+				background-color:#E18222;
+				outline:none;
+				margin: 0px 10px;
+				float:left;
+				height:50px;
+				width:120px;
+				font-size: 25px;
+				 border: 0; 
+				border-radius:50px;
+			}
+		#SVH{
+				
+				font-family: 'Jura', sans-serif;
+				outline:none;
+				color:#E18222;
+				text-decoration: none;
+				outline:none;
+				font-size: 25px;
+			}
+		
+			#ST{
+
+				/* Position */
+				position: relative;
+				right:-120px;
+				/* Style */
+				box-shadow: inset 1px 1px 20px 10px rgba(0,0,0,.55);
+				font-family: 'Jura', sans-serif;
+				outline:none;
+				color:#350000;
+				background-color:#E18222;
+				outline:none;
+				margin: 0px 10px;
+				float:left;
+				height:100px;
+				width:100px;
+				font-size: 25px;
+				 border: 0; 
+				border-radius:100%;
+				
+		}
+		#RST{
+				/* visible */
+				visibility: hidden;
+				/* Style */
+				transition-duration: 0.75s;
+				box-shadow: inset 1px 1px 20px 10px rgba(0,0,0,.55);
+				font-family: 'Jura', sans-serif;
+				outline:none;
+				color:#350000;
+				background-color:#E18222;
+				outline:none;
+				margin: 0px 10px;
+				float:left;
+				height:100px;
+				width:100px;
+				font-size: 25px;
+				 border: 0; 
+				border-radius:100%;
+		}
+
+
+/* Сабменюлисты */
+
+			.menu a{
+			text-decoration:none;
+		}
+		.menu li{
+			height:50px;
+			width:200px;
+			position:relative;
+			list-style: none;
+		}
+		.menu__list{
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 125px;
+		}
+		.menu__list>li:hover .sub-menu__list{
+			display:block;
+		}
+		.menu__link{
+			color:black;
+			border: 3px solid #C11F1F;
+			border-radius:10px;
+			width:100px;
+			outline:none;
+			height:50px;
+			margin:0 ;
+		}
+		.sub-menu__list{
+			display: none;
+		}
+		.sub-menu__list {
+			display:none;
+			width:200px;
+			text-align:center;
+			padding:20px;
+			border-radius:20px;
+			position:absolute;
+			left: -50px;
+			top: 50px;
+			background-color: #5D1212;
+			box-shadow: inset 1px 1px 100px 10px rgba(0,0,0,.55)
+		}
+		.sub-menu__link{
+			color: #E18222;
+			font-size:25px;
+		}
+
+
+
+
+
+
+/*Поппапы */
+.popup{
+			position: fixed;
+			width: 100%;
+			height:100%;
+			background-color: rgba(0,0,0,0.8);
+			top:0;
+			left:0;
+			opacity:0;
+			visibility: hidden;
+			/* overflow:auto; */
+	}
+		.popup:target{
+			opacity:1;
+			visibility: visible;
+		}
+		.popup__body{
+						min-height:100%;
+						display:flex;
+						align-items:center;
+						justify-content:center;
+						padding: 5px 10px;
+				}
+					.popup__content{
+							box-shadow: inset 1px 1px 100px 40px rgba(0,0,0,.55);
+							background-color: #bd6800;
+							border: 10px solid #4E0716;
+							border-radius:30px;
+							color: white;
+							width: 500px;
+							max-width: 900px;
+							padding: 30px;
+							position:relative;
+					}
+						.popup__close{
+							color:#5D1212;
+							position: absolute;
+							right:10px;
+							top:10px;
+							font-size:20px;
+							text-decoration:none;
+						}
+							.popup__title{
+									color:#5D1212;
+									text-shadow: black 1px 1px 0, black -1px -1px 0, 
+									black -1px 1px 0, black 1px -1px 0;
+									font-size:40px;
+									margin: 10px;
+									display:flex;
+									align-items:center;
+									justify-content:center;
+							}
+								.NICK{
+									color:#5D1212;
+									text-shadow: red 0 0 1px;
+									font-size:60px;
+									margin: 15px 0 10px 0;
+									display:flex;
+									align-items:center;
+									justify-content:center;
+								}
+								.popup__text{
+										display: flex;
+										flex-flow: column;
+										align-items:center;
+										justify-content:center;
+										height: 100%;
+								}
+								#SOVM1{
+									width:100%;
+									display: flex;
+									justify-content: center;
+								}
+								.AV{
+									height:175px;
+									width:175px;
+									border-radius:1000px;
+									border: 3px solid #5D1212;
+								}
+								#B1{
+									
+								outline:none;
+								 position:relative; 
+								top:10px;
+								left:170px;
+								opacity:0;
+								height:160px;
+								width:160px;
+								border-radius:1000px;
+								border: 3px solid #5D1212;
+								}
+								#IMP{
+									font-size:40px;
+									text-shadow: red 0 0 1px;
+								}
+								#SGN{
+									margin:20px 0 0 0 ;
+									text-shadow: red 0 0 1px;
+
+								}
+								.TXT11{
+									display:flex;
+									align-items:center;
+									justify-content:center;
+									margin:0;
+									font-size:25px;
+									color:#5D1212;
+								}
+								.TXT{
+									line-height:25px;
+									margin:5px 0px;
+									font-size:25px;
+									color:#5D1212;
+									
+								}
+								.IMGA{
+									display:flex;
+								}
+								.IC{
+									margin:20px  10px;
+									height:50px;
+									width:100px;
+									border-radius:10px;
+									border: 3px solid #5D1212;
+								}
